@@ -1,0 +1,13 @@
+body {
+    background-color: lightblue;
+}
+
+.erro_404{
+    color: red;
+    text-decoration: underline;
+}
+
+.topo{
+    background-color: gray;
+    text-decoration: underline;
+}
