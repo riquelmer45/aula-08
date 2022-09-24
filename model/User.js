@@ -1,37 +1,55 @@
 const { Datatypes, DataTypes } = require('sequelize')
 const db = require('../db/conn')
 
-const Carros = db.define('Carros', {
+const User = db.define('carros', {
     name: {
-        Type: DataTypes.STRING,
+        type: DataTypes.STRING,
         required: true
     },
     ano: {
-        Type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER,
         required: true
     },
     modelo: {
-        Type: DataTypes.STRING,
+        type: DataTypes.STRING,
         required: true
     },
     motor: {
-        Type: DataTypes.STRING,
+        type: DataTypes.STRING,
         required: true
     },
     fabricante: {
-        Type: DataTypes.STRING,
+        type: DataTypes.STRING,
         required: true
     },
     cor: {
-        Type: DataTypes.STRING,
+        type: DataTypes.STRING,
         required: true
     },
-    Valor: {
-        Type: DataTypes.INTEGER,
+    valor: {
+        type: DataTypes.STRING,
         required: true
     },
     opcionais: {
-        Type: DataTypes.STRING,
+        type: DataTypes.STRING,
         required: true
     }
 })
+
+// const { DataTypes } = require('sequelize')
+// const db = require('../db/conn')
+
+
+// const User = db.define('User', {
+//   nome: {
+//     type: DataTypes.STRING,
+//     required: true
+//   },
+//   idade: {
+//     type: DataTypes.INTEGER,
+//     required: true
+//   },
+
+// })
+
+module.exports = User

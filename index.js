@@ -28,7 +28,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //add rota users
-app.use('/user', User)
+app.use('/users', User)
 
 
 //sequelize
@@ -45,7 +45,7 @@ conn
 
 
 app.get('/', (req, res) => {
-    res.render('main')
+    res.render('/users/main')
 })
 
 //Servidor web
