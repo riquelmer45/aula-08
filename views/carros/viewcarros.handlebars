@@ -64,7 +64,7 @@
             <th scope="col">Actions</th>
             </tr>
         </thead>
-      {{#each users}}   
+      {{#each carros}}   
         <tbody>
             <tr>
             <th scope="row">{{this.id}}</th>
@@ -78,10 +78,10 @@
             <td>{{this.opcionais}}</td>
 
             <td class="text-end">
-                    <a href="/users/edit/{{this.id}}">
+                    <a href="/carros/edit/{{this.id}}">
                         {{> edit_user}}
                     </a>
-                    <form action="/users/remove" method="post">
+                    <form action="/carros/remove" method="post">
                         <input type="hidden" name="id" value="{{this.id}}">
                         <button type="submit">
                             {{> del_user}}

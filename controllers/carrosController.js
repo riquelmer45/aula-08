@@ -1,13 +1,13 @@
-const User = require('../model/User')
+const Carros = require('../model/Carros')
 
 
-module.exports = class UserController {
+module.exports = class CarrosController {
 
-    static newUser(req, res) {
-        res.render('users/userform')
+    static newCarro(req, res) {
+        res.render('carros/carrosform')
     }
 
-    static async newUserSave(req, res) {
+    static async newCarroSave(req, res) {
         const Veiculo = {
             name: req.body.name,
             ano: req.body.ano,
@@ -18,24 +18,24 @@ module.exports = class UserController {
             valor: req.body.valor,
             opcionais: req.body.opcionais
         }
-        await User.create(Veiculo)
-        res.redirect('/users/allUsers')
+        await Carros.create(Veiculo)
+        res.redirect('/carros/allCarros')
     }
 
     static async home(req, res){
-        res.render('users/main')
+        res.render('carros/main')
     }
-    static async allUsers(req, res){
-        const users = await User.findAll({ raw: true})
-        res.render('users/viewuser', { users })
+    static async allCarros(req, res){
+        const carros = await Carros.findAll({ raw: true})
+        res.render('carros/viewcarros', { carros })
     }
 
-    static async updateUser(req, res){
+    static async updatecarros(req, res){
         const id = req.params.id
-        const user = await User.findOne({ where: { id: id }, raw: true})
-        res.render('users/edit', { user})
+        const carro = await Carros.findOne({ where: { id: id }, raw: true})
+        res.render('carros/edit', { carro})
     }
-    static async updateUserSave(req, res) {
+    static async updateCarrosSave(req, res) {
         const id = req.body.id
         const user = {
             name: req.body.name,
@@ -47,17 +47,17 @@ module.exports = class UserController {
             valor: req.body.valor,
             opcionais: req.body.opcionais
         }
-        await User.update(user, { where: { id: id } })
-          .then(res.redirect('/users/allUsers'))
+        await Carros.update(user, { where: { id: id } })
+          .then(res.redirect('/carros/allcarros'))
           .catch((err) => {
             console.log(err)
           })
       }
     
-    static async removeUser(req, res) {
+    static async removeCarros(req, res) {
         const id = req.body.id
-        await User.destroy({ where: { id: id } })
-          .then(res.redirect('/users/allUsers'))
+        await Carros.destroy({ where: { id: id } })
+          .then(res.redirect('/carros/allcarros'))
           .catch((err) => {
             console.log(err)
           })

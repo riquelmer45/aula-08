@@ -1,13 +1,13 @@
-<h1>Edit Veiculo {{user.nome}}</h1>
+<h1>Edit Veiculo {{Carros.nome}}</h1>
 
 <div class="back_view">
-  <form action="/users/edit" method="post" class="row m-3">
+  <form action="/carros/edit" method="post" class="row m-3">
 
     <div class="row align-items-start">
-      <input type="hidden" name="id" value="{{user.id}}" />
+      <input type="hidden" name="id" value="{{Carros.id}}" />
       <div class="col-md-6">
         <label for="name" class="form-label">Nome:</label>
-        <input type="text" name="name" value="{{user.name}}" class="form-control" />
+        <input type="text" name="name" value="{{carros.name}}" class="form-control" />
       </div>
 
     </div>
@@ -15,48 +15,48 @@
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="ano" class="form-label">Ano:</label>
-        <input type="text" name="ano" value="{{user.ano}}" class="form-control" />
+        <input type="text" name="ano" value="{{carros.ano}}" class="form-control" />
       </div>
     </div>
 
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="modelo" class="form-label">Modelo:</label>
-        <input type="text" name="modelo" value="{{user.modelo}}" class="form-control" />
+        <input type="text" name="modelo" value="{{carros.modelo}}" class="form-control" />
       </div>
     </div>
 
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="motor" class="form-label">Motor:</label>
-        <input type="text" name="motor" value="{{user.motor}}" class="form-control" />
+        <input type="text" name="motor" value="{{Carros.motor}}" class="form-control" />
       </div>
     </div>
 
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="fabricante" class="form-label">Fabricante:</label>
-        <input type="text" name="fabricante" value="{{user.fabricante}}" class="form-control" />
+        <input type="text" name="fabricante" value="{{carros.fabricante}}" class="form-control" />
       </div>
     </div>
 
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="cor" class="form-label">Cor:</label>
-        <input type="text" name="cor" value="{{user.cor}}" class="form-control" />
+        <input type="text" name="cor" value="{{carros.cor}}" class="form-control" />
       </div>
     </div>
 
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="valor" class="form-label">Valor:</label>
-        <input type="text" name="valor" value="{{user.valor}}" class="form-control" />
+        <input type="text" name="valor" value="{{carro.valor}}" class="form-control" />
       </div>
     </div>
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="opcionais" class="form-label">Opcionais:</label>
-        <input type="text" name="opcionais" value="{{user.opicionais}}" class="form-control" />
+        <input type="text" name="opcionais" value="{{carros.opicionais}}" class="form-control" />
       </div>
     </div>
 

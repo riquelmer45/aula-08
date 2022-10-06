@@ -3,9 +3,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 const exphbs = require('express-handlebars')
-const User = require('./routes/userRouter')
+const Carro = require('./routes/carrosRouter')
 const conn = require('./db/conn')
-const userModal = require('./model/User')
+const userModal = require('./model/Carros')
 
 
 const hbs = exphbs.create({
@@ -27,8 +27,8 @@ app.use(express.json())
 //css
 app.use(express.static('public'))
 
-//add rota users
-app.use('/users', User)
+//add rota carros
+app.use('/carros', Carro)
 
 
 //sequelize
@@ -45,7 +45,7 @@ conn
 
 
 app.get('/', (req, res) => {
-    res.render('/users/main')
+    res.render('/carros/main')
 })
 
 //Servidor web
