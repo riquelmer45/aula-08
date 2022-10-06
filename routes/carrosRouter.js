@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const UserController = require('../controllers/carrosController')
+const carrosController = require('../controllers/carrosController')
 
-router.get('/add', UserController.newCarro)
-router.post('/add', UserController.newCarroSave)
-router.get('/edit/:id', UserController.updatecarros)
-router.post('/edit', UserController.updateCarrosSave)
-router.post('/remove', UserController.removeCarros)
-router.get('/allCarros', UserController.allCarros)
-router.get('/', UserController.home)
+router.get('/add', carrosController.newCarro)
+router.post('/add', carrosController.newCarroSave)
+router.get('/edit/:id', carrosController.updatecarros)
+router.post('/edit', carrosController.updateCarrosSave)
+router.post('/remove', carrosController.removeCarros)
+router.get('/allCarros', carrosController.allCarros)
+router.get('/', carrosController.home)
 
 module.exports = router
