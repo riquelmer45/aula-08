@@ -1,10 +1,10 @@
-<h1>Edit Veiculo {{Carros.nome}}</h1>
+<h1>Edit Veiculo {{carros.nome}}</h1>
 
 <div class="back_view">
   <form action="/carros/edit" method="post" class="row m-3">
 
     <div class="row align-items-start">
-      <input type="hidden" name="id" value="{{Carros.id}}" />
+      <input type="hidden" name="id" value="{{carros.id}}" />
       <div class="col-md-6">
         <label for="name" class="form-label">Nome:</label>
         <input type="text" name="name" value="{{carros.name}}" class="form-control" />
@@ -29,7 +29,7 @@
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="motor" class="form-label">Motor:</label>
-        <input type="text" name="motor" value="{{Carros.motor}}" class="form-control" />
+        <input type="text" name="motor" value="{{carros.motor}}" class="form-control" />
       </div>
     </div>
 
@@ -50,7 +50,7 @@
     <div class="row align-items-start">
       <div class="col-md-4">
         <label for="valor" class="form-label">Valor:</label>
-        <input type="text" name="valor" value="{{carro.valor}}" class="form-control" />
+        <input type="text" name="valor" value="{{carros.valor}}" class="form-control" />
       </div>
     </div>
     <div class="row align-items-start">

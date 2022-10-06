@@ -32,12 +32,12 @@ module.exports = class CarrosController {
 
     static async updatecarros(req, res){
         const id = req.params.id
-        const carro = await Carros.findOne({ where: { id: id }, raw: true})
-        res.render('carros/edit', { carro})
+        const carros = await Carros.findOne({ where: { id: id }, raw: true})
+        res.render('carros/edit', { carros })
     }
     static async updateCarrosSave(req, res) {
         const id = req.body.id
-        const user = {
+        const carros = {
             name: req.body.name,
             ano: req.body.ano,
             modelo: req.body.modelo,
@@ -47,7 +47,7 @@ module.exports = class CarrosController {
             valor: req.body.valor,
             opcionais: req.body.opcionais
         }
-        await Carros.update(user, { where: { id: id } })
+        await Carros.update(carros, { where: { id: id } })
           .then(res.redirect('/carros/allcarros'))
           .catch((err) => {
             console.log(err)
