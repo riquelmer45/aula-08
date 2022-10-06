@@ -6,7 +6,13 @@
     
   }
   .corpo {
+    width: 100%;
     position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 85vh;
     background-color: 	#87CEFA
   }
@@ -39,10 +45,11 @@
   .boxCarro {
     width: 445px;
     height: 580px;
-    margin-left: 35%;
-    margin-bottom: 5px;
+    margin-block: auto;
+    
     background-color: white;
     border-radius: 10px;
+    margin: 5px;
     
   }
 
